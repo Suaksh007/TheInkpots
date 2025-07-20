@@ -1,0 +1,1815 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+:root {
+  --main-color: gold;
+  --black: lavender;
+  --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+
+* {
+  font-family: 'Roboto', serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  padding: 1.5rem 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: background 0.3s ease;
+  height: 80px;
+}
+
+.header.scrolled {
+  background-color: var(--black);
+  color: white;
+}
+
+/* Container for both logos */
+.logo-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.logo-img,
+.logo-text-img {
+  height: 80px;
+  width: auto;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Slight overlap — tweak as needed */
+.logo-text-img {
+  margin-left: -40px; /* This creates a *slight* overlap */
+  height: 120px;
+  z-index: 1;
+  position: relative;
+}
+
+/* Center navbar */
+.navbar {
+  flex: 1; /* This allows it to stretch and center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header.header .navbar a {
+  color: #6c5ce7;
+  margin: 0 1rem;
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--main-color);
+  border-bottom: 0.1rem solid var(--main-color);
+}
+
+/* Optional: icon styling */
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.search-button{
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Beautiful gradient */
+  color: white;
+  border: none;
+  padding: 3px 4px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.4s ease, transform 0.2s ease;
+}
+
+.search-button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb); /* Reversed gradient on hover */
+  transform: scale(1.05);
+}
+
+.search-input{
+  height: 20px;
+  border-color: #004D99;
+}
+
+.search-input:focus {
+  outline: none;
+  border: 1px solid #cccccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+  position: relative;
+  height: 120vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+
+  background-image: url("Images/Boy.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+
+  transition: background-image 1s ease-in-out;
+  box-sizing: border-box;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero .cta {
+  padding: 1rem 2rem;
+  background: white;
+  color: black;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.Home_Heading {
+  font-size: 6rem !important;
+  font-weight: bold;
+  color: #aa00ff; /* or your desired color */
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.ParaClass{
+  font-size: 1.5rem;
+}
+
+.section {
+  padding: 2rem;
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.Index_Heading{
+  font-size: 2rem;
+}
+
+/* Pograms for Individuals */
+
+.courses{
+  height: auto;
+  text-align: center;
+  padding: 50px;
+  background-color: beige;
+}
+.course-list{
+  display: flex;
+  justify-content: space-around; /* Even spacing */
+  gap: 20px; /* Adds space between cards */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  margin-top: 30px;
+}
+
+.course-card{
+  flex: 1 1 30%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 300px;
+  margin: 10px auto;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.course-card img {
+  margin-top: 15px;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card-link h3,
+.card-link p {
+  margin: 0;
+}
+
+.card-link img {
+  margin-top: 15px;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Programs for Schools */
+
+#school-programs{
+  background-color: #A8D5BA;
+  height: auto;
+}
+
+/* Index Page Testimonials Styling */
+
+.index-testimonials {
+  text-align: center;
+  padding-top: 15px;
+}
+
+.index-testimonials .testimonial-card {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 300px;
+  margin: 10px;
+  width: 100%;
+  text-align: left;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.index-testimonials .testimonial-card .testimonial-image {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.index-testimonials .testimonial-card .testimonial-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.index-testimonials .testimonial-card .testimonial-text p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.index-testimonials .testimonial-card .stars {
+  font-size: 1.2rem;
+  color: gold;
+}
+
+.index-testimonials .testimonial-card span {
+  font-weight: bold;
+  color: #555;
+}
+
+.index-testimonials .view-more {
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.index-testimonials .view-more .cta {
+  padding: 10px 20px;
+  background-color: #5cb85c;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.index-testimonials .view-more .cta:hover {
+  background-color: #4cae4c;
+}
+
+.gallery {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.gallery-slideshow {
+  position: relative;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dots {
+  margin-top: 20px;
+}
+
+.dot {
+  height: 14px;
+  width: 14px;
+  margin: 0 6px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #555;
+}
+
+.view-more {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.cta {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #0056b3;
+}
+
+/* Perfume Section */
+.perfume-section {
+  background: linear-gradient(to right, #fbeee0, #ffe5ec);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.perfume-section .section-title {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.perfume-section .section-description {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #555;
+}
+
+.perfume-section .btn-explore {
+  background-color: #cc3366;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 1em;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.perfume-section .btn-explore:hover {
+  background-color: #b02b5f;
+}
+
+
+.contact{
+  text-align: center;
+  height: 80vh;
+  padding-top: 20px;
+}
+
+#contact-form {
+  display: grid;
+  max-width: 400px; /* Optional: limits form width for better appearance */
+  margin: 0 auto; /* Centers the form */
+  padding: 5px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0px;
+}
+
+.form-field label {
+  margin-bottom: 0.5rem;
+  font-weight: bold; /* Optional: makes the label bold */
+}
+
+input, textarea {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding does not affect width */
+}
+
+textarea {
+  resize: vertical; /* Allows vertical resizing of the textarea */
+  height: 100px; /* Default height */
+}
+
+button.submit {
+  padding: 0.8rem 1.5rem;
+  background-color: #007BFF; /* Adjust to your preferred color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.submit:hover {
+  background-color: #0056b3; /* Darker shade for hover */
+}
+
+footer {
+  background: navy;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* All Testimonials Page */
+
+.TestimonialPage-Text{
+  text-align: center;
+  font-size: 2rem
+}
+
+.testimonials.newpage {
+  padding: 80px 20px;
+  background-color: linear-gradient(135deg, #f9f9ff 0%, #e6ecff 100%);;
+}
+
+.testimonial-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  padding: 20px;
+}
+
+.testimonial-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-image {
+  display: flex;
+  justify-content: center; /* Horizontally centers the image */
+  align-items: center; /* Vertically centers the image */
+  width: 100%; /* Make sure the container takes up the available width */
+  height: 150px; /* Set a fixed height for the container */
+}
+
+.testimonial-image img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover; /* Ensures the image fits the container while maintaining aspect ratio */
+  margin-bottom: 15px;
+  border-radius: 50%; /* Circular border for the image */
+  transition: transform 0.3s ease;
+}
+
+.testimonial-image img:hover {
+  transform: scale(1.1);
+}
+
+.testimonial-text {
+  text-align: center;
+}
+
+.testimonial-text p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.stars {
+  color: #ffbe00;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: lavender;
+  color: #9d00ff;
+}
+
+/*Creative Writing, Maths and Science Page*/
+
+.creative-writing {
+  padding: 80px 10px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.creative-writing h1 {
+  font-size: 3rem;
+  color: #333;
+}
+
+.program-details .program-image img {
+  height: 250px;
+  width: 600px;
+}
+
+.program-description {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.program-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.program-image img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.program-content {
+  max-width: 600px;
+  text-align: left;
+}
+
+.program-content h2 {
+  font-size: 2rem;
+  margin-top: 20px;
+  color: #333;
+}
+
+.program-content ul {
+  list-style-type: square;
+  margin-left: 20px;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.program-content p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+h2.price {
+  font-size: 1.5rem;
+  color: #007BFF;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.request-quote-button {
+  display: inline-block;
+  padding: 10px 25px;
+  margin-top: 1rem;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.request-quote-button:hover {
+  background: linear-gradient(135deg, #e67e22, #f39c12);
+}
+
+/* Checkout Page */
+
+.checkout {
+  padding: 50px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.checkout-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.checkout h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.order-summary {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.order-summary h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.purchase-now {
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.purchase-now:hover {
+  background-color: #0056b3;
+}
+
+/*Dashboard Page*/
+
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-size: cover;
+}
+
+/* Only apply background to the dashboard page */
+.dashboard-page {
+  background: url('Images/dashboardBG.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+/* Dashboard Layout */
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  color: white;
+  width: 220px; /* Adjusted width for better look */
+  transition: width 0.3s ease, opacity 0.3s ease; /* Added opacity transition */
+  overflow: hidden;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: block;
+  padding: 70px 20px;
+  opacity: 1; /* Default visible state */
+}
+
+.sidebar.expanded {
+  opacity: 1; /* Make sidebar fully visible */
+}
+
+.sidebar.collapsed {
+  width: 70px; /* Narrow width when collapsed */
+  opacity: 1; /* Keep background visible */
+}
+
+.sidebar .toggle-sidebar-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #1abc9c;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  z-index: 1001;
+}
+
+.sidebar .toggle-sidebar-btn:hover {
+  transform: rotate(180deg);
+  background: #16a085;
+}
+
+/* Sidebar Header */
+
+.sidebar-header {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: bold;
+  transition: opacity 0.3s ease; /* Added opacity transition */
+}
+
+.welcome-text {
+  color: white;
+}
+
+.sidebar.collapsed .sidebar-header {
+  opacity: 0; /* Fade out the header */
+  pointer-events: none; /* Disable interaction */
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 2rem;
+}
+
+.sidebar-menu li {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-menu li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: background 0.3s ease, padding-left 0.3s ease;
+}
+
+.sidebar-menu li a:hover {
+  background: #1abc9c;
+  padding-left: 1rem;
+}
+
+.sidebar-menu li a .menu-icon {
+  margin-right: 15px;
+}
+
+/* Icons for Menu */
+.sidebar-menu li a .menu-icon {
+  font-size: 1.5rem;
+}
+
+.sidebar.collapsed .sidebar-menu li {
+  opacity: 0; /* Hide menu items when collapsed */
+  pointer-events: none; /* Disable interaction */
+}
+
+.sidebar.collapsed .sidebar-menu li a {
+  visibility: hidden; /* Hide menu links */
+}
+
+.sidebar.collapsed .sidebar-menu li a .menu-icon {
+  visibility: visible; /* Keep icons visible */
+}
+
+.sidebar.collapsed .sidebar-menu li a .menu-text {
+  display: none;
+}
+
+/* Main Content Styling */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  overflow-y: auto;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  margin-left: 220px;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar.collapsed + .main-content {
+  margin-left: 70px;
+}
+
+/* Dashboard Sections */
+.dashboard-section {
+  display: none;
+}
+
+.dashboard-section.hidden {
+  display: none;
+}
+
+.dashboard-section.active {
+  display: block;
+}
+
+.dashboard-section h1 {
+  color: #1e3c72;
+  font-size: 2rem;
+}
+
+.dashboard-section ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* Toggle Button */
+.toggle-sidebar-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.sidebar.collapsed .toggle-sidebar-btn {
+  margin-left: -12px;
+}
+
+.toggle-sidebar-btn:hover {
+  transform: rotate(90deg);
+}
+
+/* Form Styling */
+.dashboard-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-form label {
+  font-weight: bold;
+  margin-top: 1rem;
+  display: block;
+}
+
+.dashboard-form input {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.dashboard-form button {
+  padding: 0.8rem 1.5rem;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.dashboard-form button.delete-account {
+  background-color: #ff4d4d;
+}
+
+.dashboard-form button:hover {
+  opacity: 0.9;
+}
+
+/* Modal Background */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 1002;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px); /* Blurs the background */
+  display: none;
+}
+
+/* Modal Content */
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+}
+
+/* Modal Buttons */
+.modal-content button {
+  margin: 1rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#confirmLogout {
+  background-color: #1e90ff;
+  color: white;
+}
+
+#cancelLogout {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+#confirmLogout:hover {
+  background-color: #1c86e5;
+}
+
+#cancelLogout:hover {
+  background-color: #e74c3c;
+}
+
+
+/*About Page*/
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.8;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* Header Navigation */
+.about-header {
+  background: beige;
+  color: black;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 80px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.about-logo img {
+  height: auto;
+  max-height: 150px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  transition: color 0.3s ease-in-out;
+  font-weight: 600;
+}
+
+.nav-links li a:hover {
+  color: darkblue;
+}
+
+.nav-links .btn {
+  padding: 8px 15px;
+  background: white;
+  color: #43A047;
+  border-radius: 5px;
+}
+
+.nav-links .btn:hover {
+  background: #f1f1f1;
+}
+
+/* About Section */
+
+.About_Heading{
+  font-size: 2rem;
+  padding: 20px;
+}
+
+#about {
+  padding: 60px 20px;
+  background-color: #E3F2FD;
+  text-align: center;
+}
+
+#about .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.about-content .text {
+  flex: 1;
+  font-size: 1.1rem;
+}
+
+.about-content .image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mission section styling */
+
+.Mission_Heading{
+  font-size: 2rem;
+}
+
+.mission-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: start;
+}
+
+.mission-card {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  cursor: pointer;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.mission-card.active {
+  background-color: #dff6fd;
+  margin-bottom: 20px;
+}
+
+.icon-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.icon-title i.animated-icon {
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.mission-card.active i.animated-icon {
+  transform: scale(1.2);
+  color: #007bff;
+}
+
+.animated-icon {
+  font-size: 2.5rem;
+  color: #0077cc;
+  transition: transform 0.3s ease, color 0.3s ease;
+  margin-bottom: 0.5rem;
+}
+
+.animated-icon:hover {
+  transform: rotate(10deg) scale(1.2);
+  color: #00bfa6;
+}
+
+.mission-card h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.mission-card.active .mission-content {
+  max-height: 500px !important; /* Increased maximum height */
+  padding: 15px 10px !important;
+  transition: max-height 0.5s ease, padding 0.3s ease !important;
+}
+
+.mission-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  transition: max-height 0.5s ease-out, padding 0.3s ease;
+}
+
+/* Team Section */
+
+.team-flip-horizontal {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #FFE4C4;
+}
+
+.team-flip-horizontal h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.team-member {
+  width: 180px;
+  height: 180px;
+  perspective: 1000px;
+}
+
+.flip-card {
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 12px;
+}
+
+.flip-card-front {
+  background-color: #3498db;
+  transition: background-color 0.3s ease;
+}
+
+.flip-card-back {
+  background-color: #e74c3c;
+  color: #fff;
+  transform: rotateY(180deg);
+  transition: background-color 0.3s ease;
+}
+
+/* Add scaling effect on hover */
+.team-member:hover .flip-card {
+  transform: scale(1.1);  /* Make the card grow slightly */
+}
+
+/* Adding shadow effect for a 3D feel */
+.team-member {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+/* Adding a background color shift */
+.flip-card-front:hover {
+  background-color: #1abc9c;
+}
+
+.flip-card-back:hover {
+  background-color: #f39c12;
+}
+
+
+.founder-message {
+  background: linear-gradient(to right, #f8f9fa, #f1f1f9);
+  padding: 60px 20px;
+  border-top: 2px solid #eee;
+  animation: fadeSlide 1.5s ease-in-out;
+}
+
+.founder-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.founder-heading {
+  font-size: 2.2em;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #2c3e50;
+  font-family: 'Georgia', serif;
+  position: relative;
+}
+
+.founder-heading::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #6c5ce7;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.founder-text {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  font-family: 'Roboto', serif;
+  color: #444;
+  font-size: 1.05em;
+  line-height: 1.8;
+  animation: fadeSlide 1.5s ease-in-out;
+}
+
+.founder-signature {
+  margin-top: 30px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.6em;
+  color: #6c5ce7;
+  text-align: right;
+}
+
+/* Animation */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.founder-message-alt {
+  background: linear-gradient(to right, #fef9f9, #f6f0ff);
+  padding: 60px 20px;
+  border-top: 2px solid #eee;
+  animation: fadeSlide 1.5s ease-in-out;
+}
+
+.founder-message-alt .founder-signature {
+  color: #e17055;
+}
+
+/*Sign in Page*/
+
+/* Wrapper for the sign-in page to ensure no clashes */
+#sign-in-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f39c12, #8e44ad);
+  font-family: 'Roboto', serif;
+  padding-top: 80px; /* Adjusted for the fixed header */
+  box-sizing: border-box;
+}
+
+/* Header styles (consistent with the home page) */
+header.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  padding: 1.5rem 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: background 0.3s ease;
+  height: 80px; /* Match height with the home page */
+}
+
+header.header.scrolled {
+  background-color: var(--black);
+  color: white;
+}
+
+header.header .Logo {
+  position: relative;
+  height: 100%; /* Ensure the logo stays within the header height */
+}
+
+header.header .Logo img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 150px; /* Maintain the same height as in the home page */
+}
+
+header.header .navbar a {
+  color: burlywood;
+  margin: 0 1rem;
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+
+header.header .navbar a:hover {
+  color: var(--main-color);
+  border-bottom: 0.1rem solid var(--main-color);
+}
+
+/* Container for the sign-in form */
+#sign-in-page .sign-in-container {
+  width: 400px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* Title */
+#sign-in-page .sign-in-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #333333;
+}
+
+/* Form Fields */
+#sign-in-page .sign-in-container .sign-in-field {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+#sign-in-page .sign-in-container .sign-in-field label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #555555;
+}
+
+#sign-in-page .sign-in-container .sign-in-field input {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+#sign-in-page .sign-in-container .sign-in-field input:focus {
+  border-color: #8e44ad;
+  outline: none;
+}
+
+/* Submit Button */
+#sign-in-page .sign-in-container .sign-in-btn {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  color: #ffffff;
+  background: #8e44ad;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#sign-in-page .sign-in-container .sign-in-btn:hover {
+  background: #6d3189;
+}
+
+/* Links */
+#sign-in-page .sign-in-container .sign-in-links {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+#sign-in-page .sign-in-container .sign-in-links a {
+  color: #8e44ad;
+  text-decoration: none;
+}
+
+#sign-in-page .sign-in-container .sign-in-links a:hover {
+  text-decoration: underline;
+}
+
+/*Sign Up Page*/
+
+/* Global Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+}
+
+/* Background Styling */
+#sign-up-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  padding-top: 80px; /* Adjust for the fixed header */
+  box-sizing: border-box;
+}
+
+/* Header styles (consistent with the home page) */
+header.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  padding: 1.5rem 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: background 0.3s ease;
+  height: 80px; /* Match height with the home page */
+}
+
+header.header.scrolled {
+  background-color: var(--black);
+  color: white;
+}
+
+header.header .Logo {
+  position: relative;
+  height: 100%;
+}
+
+header.header .Logo img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 150px;
+}
+
+header.header .navbar a {
+  color: brown;
+  margin: 0 1rem;
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+
+header.header .navbar a:hover {
+  color: var(--main-color);
+  border-bottom: 0.1rem solid var(--main-color);
+}
+
+/* Container Styling */
+.sign-up-container {
+  width: 400px;
+  padding: 10px 20px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* Title */
+.sign-up-container h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+/* Form Fields */
+.sign-up-field {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.sign-up-field label {
+  font-size: 1rem;
+  color: #34495e;
+  display: block;
+}
+
+.sign-up-field input {
+  width: 100%;
+  padding: 0.7rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.sign-up-field input:focus {
+  border-color: #f39c12;
+  outline: none;
+}
+
+/* Button */
+.sign-up-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  background: #f39c12;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.sign-up-btn:hover {
+  background: #d6800a;
+}
+
+/* Links */
+.sign-up-links {
+  margin-top: 1rem;
+}
+
+.sign-up-links p {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+.sign-up-links a {
+  color: #f39c12;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.sign-up-links a:hover {
+  color: #d6800a;
+}
+
+
+/*Forgot Password page*/
+
+/* Global Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+}
+
+/* Background Styling with Animated Gradient */
+#forgot-password-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #39ff14, #00ffff, #00ffef, #00ffc8);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Semi-Transparent Overlay */
+#forgot-password-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Darker overlay for stronger contrast */
+  z-index: -1;
+}
+
+/* Container Styling */
+.forgot-password-container {
+  width: 400px;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white box */
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  backdrop-filter: blur(10px); /* Slight blur effect for a modern look */
+}
+
+/* Title */
+.forgot-password-container h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adds a slight shadow for depth */
+}
+
+/* Description */
+.forgot-password-container p {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+}
+
+/* Form Fields */
+.forgot-password-field {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.forgot-password-field label {
+  font-size: 1rem;
+  color: #34495e;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.forgot-password-field input {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.forgot-password-field input:focus {
+  border-color: #ff6a00;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 106, 0, 0.7); /* Glow effect when focused */
+}
+
+/* Button */
+.forgot-password-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  background: linear-gradient(45deg, #ff7e5f, #feb47b, #ff6a00);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.forgot-password-btn:hover {
+  background: linear-gradient(45deg, #ff6a00, #d4a5a5, #3b1053);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 106, 0, 0.6); /* Add subtle glow effect */
+}
+
+/* Links */
+.forgot-password-links {
+  margin-top: 1rem;
+}
+
+.forgot-password-links p {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+.forgot-password-links a {
+  color: #ff7e5f;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.forgot-password-links a:hover {
+  color: #ffd500;
+}
+
+

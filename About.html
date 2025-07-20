@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - InkPots</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <header class="header">
+    <div class="logo-container">
+      <img src="Images/The_InkPots.png" class="logo-img">
+      <img src="Images/inkPots.gif" class="logo-text-img" alt="">
+    </div>
+  
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="index.html#courses">Programs</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="About.html">About us</a>
+      <a href="signin.html">Sign In</a>
+    </nav>
+  
+    <div class="icons">
+      <input type="text" class="search-input" id="searchInput" placeholder="Search..." />
+      <button id="searchBtn" class="search-button"><i class="fas fa-search"></i></button>
+    </div>
+    
+  </header>
+  
+
+  <section id="about">
+    <div class="container">
+      <h1 class="About_Heading">About Us</h1>
+      <div class="about-content">
+        <div class="text">
+          <p>At INKPOTS, we believe that education extends beyond textbooks and classrooms. Our philosophy is rooted in the holistic development of learners, nurturing academic excellence while fostering life skills, creativity, and a growth mindset.</p>
+          <p> By integrating experiential learning, innovative pedagogy, and emotional well-being, we aim to create a future-ready generation equipped to thrive in an ever-changing world. </p>
+        </div>
+        <div class="image">
+          <img src="Images/abt_Image.jpg" alt="Education">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mission">
+    <div class="container mission-section">
+      <h2 class="Mission_Heading">Our Mission</h2>
+      <div class="mission-grid">
+        
+        <!-- Card 1 -->
+        <div class="mission-card">
+          <div class="icon-title" onclick="toggleContent(this)">
+            <i class="fas fa-lightbulb animated-icon"></i>
+            <h3>Innovation</h3>
+          </div>
+          <div class="mission-content">
+            <p>We bring fresh ideas and tech-driven solutions to modern education, transforming classrooms into creative spaces.</p>
+          </div>
+        </div>
+  
+        <!-- Card 2 -->
+        <div class="mission-card">
+          <div class="icon-title" onclick="toggleContent(this)">
+            <i class="fas fa-rocket animated-icon"></i>
+            <h3>Growth Mindset</h3>
+          </div>
+          <div class="mission-content">
+            <p>We promote a culture of lifelong learning, where every student is encouraged to grow through challenges.</p>
+          </div>
+        </div>
+  
+        <!-- Card 3 -->
+        <div class="mission-card">
+          <div class="icon-title" onclick="toggleContent(this)">
+            <i class="fas fa-users animated-icon"></i>
+            <h3>Community</h3>
+          </div>
+          <div class="mission-content">
+            <p>We believe in building an inclusive learning environment where everyone feels heard, respected, and inspired.</p>
+          </div>
+        </div>
+  
+        <!-- Card 4 -->
+        <div class="mission-card">
+          <div class="icon-title" onclick="toggleContent(this)">
+            <i class="fas fa-chalkboard-teacher animated-icon"></i>
+            <h3>Empowerment</h3>
+          </div>
+          <div class="mission-content">
+            <p>Our goal is to empower students and educators with tools that enhance confidence and independent thinking.</p>
+          </div>
+        </div>
+  
+        <!-- Card 5 -->
+        <div class="mission-card">
+          <div class="icon-title" onclick="toggleContent(this)">
+            <i class="fas fa-globe animated-icon"></i>
+            <h3>Global Reach</h3>
+          </div>
+          <div class="mission-content">
+            <p>We strive to make high-quality education available to learners around the world, regardless of location or background.</p>
+          </div>
+        </div>
+  
+        <!-- Card 6 -->
+        <div class="mission-card">
+          <div class="icon-title" onclick="toggleContent(this)">
+            <i class="fas fa-code animated-icon"></i>
+            <h3>Tech Integration</h3>
+          </div>
+          <div class="mission-content">
+            <p>We seamlessly integrate technology into the learning process, ensuring a future-ready education experience.</p>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+    
+  <section class="team-flip-horizontal">
+    <h2>Meet Our Team</h2>
+    <div class="team-container">
+      <div class="team-member">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span class="name">Mrs. Monika Sharma</span>
+            </div>
+            <div class="flip-card-back">
+              <p>Founder-Director</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="team-member">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span class="name">Mrs. Aarti Singh Sardana</span>
+            </div>
+            <div class="flip-card-back">
+              <p>Founder-Director</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="team-member">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span class="name">Mr. Suaksh Sharma</span>
+            </div>
+            <div class="flip-card-back">
+              <p>Web Developer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="team-member">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span class="name">Sonali</span>
+            </div>
+            <div class="flip-card-back">
+              <p>UX/UI Designer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="founder-message animated-fade-slide">
+    <div class="container founder-container">
+      <h2 class="founder-heading">Message from the Founder-Director</h2>
+      <div class="founder-text">
+        <p>
+          Welcome to <strong>INKPOTS</strong>, a platform where education meets innovation and transformation. With over 30 years of experience as a mentor, educator, and curriculum designer, I have dedicated my journey to empowering schools and shaping the lives of students, parents, and educators.
+        </p>
+        <p>
+          At INKPOTS, we believe that education is more than academics—it's about nurturing critical thinkers, confident individuals, and empathetic leaders. Our mission is to equip schools with comprehensive, future-ready curricula that balance academic excellence with experiential learning, skill development, and emotional well-being.
+        </p>
+        <p>
+          As an internationally recognized and awarded educator, I have witnessed the profound impact of holistic education on young minds. Through INKPOTS, we aim to collaborate with schools to create transformative learning experiences, enhance curriculum design, and provide innovative workshops, personalized counseling, and real-world exposure.
+        </p>
+        <p>
+          Together, let's redefine education, inspire excellence, and prepare learners to excel in an ever-evolving world.
+        </p>
+        <p class="founder-signature">Warm regards,<br><strong>Mrs. Monika Sharma</strong><br>Founder-Director</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="founder-message-alt animated-fade-slide">
+    <div class="container founder-container">
+      <h2 class="founder-heading">Message from the Founder-Director</h2>
+      <div class="founder-text">
+        <p>
+          Welcome to <strong>INKPOTS</strong>, a venture dedicated to redefining education and empowering schools to deliver meaningful and impactful learning experiences. With 22 years of expertise in international education, curriculum development, and school establishment, I have witnessed firsthand the transformative power of a well-designed educational framework.
+        </p>
+        <p>
+          At INKPOTS, we specialize in crafting dynamic curricula that blend academic excellence with hands-on learning, life skills, and personality development. Our goal is to support schools in building future-ready learners equipped to thrive in a global landscape.
+        </p>
+        <p>
+          Education is the foundation of progress, and through our collaboration with educators, parents, and students, we aim to create environments where innovation, creativity, and growth flourish. Together, let’s inspire excellence and pave the way for a brighter, more empowered future in education.
+        </p>
+        <p class="founder-signature">Warm regards,<br><strong>Aarti Singh Sardana</strong><br>Founder-Director</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 InkPots. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

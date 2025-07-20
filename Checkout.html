@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - InkPots</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body class="Body">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="Images/The_InkPots.png" class="logo-img">
+      <img src="Images/inkPots.gif" class="logo-text-img" alt="">
+    </div>
+  
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="index.html#courses">Programs</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="About.html">About us</a>
+      <a href="signin.html">Sign In</a>
+    </nav>
+  
+    <div class="icons">
+      <div class="fas fa-search" id="search-btn"></div>
+      <input type="text" class="search-input" placeholder="Search..." />
+    </div>
+  </header>
+
+  <!-- Checkout Section -->
+  <section class="checkout">
+    <div class="checkout-container">
+      <h1>Checkout</h1>
+
+      <div class="order-summary">
+        <h2>Order Summary</h2>
+        <div class="summary-item">
+          <span>Creative Writing Course</span>
+          <span>$299</span>
+        </div>
+        <div class="total">
+          <span><strong>Total</strong></span>
+          <span><strong>$299</strong></span>
+        </div>
+      </div>
+
+      <form action="payment-processing.html" method="POST" class="checkout-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required placeholder="Enter your full name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="Enter your email">
+        </div>
+
+        <div class="form-group">
+          <label for="address">Billing Address</label>
+          <input type="text" id="address" name="address" required placeholder="Enter your billing address">
+        </div>
+
+        <div class="form-group">
+          <label for="payment">Payment Method</label>
+          <select id="payment" name="payment" required>
+            <option value="credit-card">Credit Card</option>
+            <option value="paypal">PayPal</option>
+          </select>
+        </div>
+
+        <button type="submit" class="purchase-now">Complete Purchase</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 InkPots. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
