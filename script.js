@@ -144,7 +144,7 @@ document.getElementById("searchBtn").addEventListener("click", function () {
 
   // Simple keyword-based scroll/jump
   if (input.includes("about")) {
-    window.location.href = "About.html#about";
+    window.location.href = "about.html#about";
   } else if (input.includes("contact")) {
     window.location.href = "index.html#contact";
   } else if (input.includes("program") || input.includes("courses")) {
