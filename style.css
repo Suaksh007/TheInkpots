@@ -73,8 +73,9 @@ html {
 .header.header .navbar a {
   color: #6c5ce7;
   margin: 0 1rem;
-  font-size: 1.4rem;
+  font-size: 2.4rem;
   transition: color 0.3s ease;
+  padding: 0px 5px;
 }
 
 .navbar a:hover {
@@ -88,11 +89,23 @@ html {
   align-items: center;
 }
 
+.search-input{
+  height: 27px;
+  width: 140px;
+  border-color: #004D99;
+}
+
+.search-input:focus {
+  outline: none;
+  border: 1px solid #cccccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
 .search-button{
   background: linear-gradient(135deg, #6a11cb, #2575fc); /* Beautiful gradient */
   color: white;
   border: none;
-  padding: 3px 4px;
+  padding: 5px 6px;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
@@ -102,17 +115,6 @@ html {
 .search-button:hover {
   background: linear-gradient(135deg, #2575fc, #6a11cb); /* Reversed gradient on hover */
   transform: scale(1.05);
-}
-
-.search-input{
-  height: 20px;
-  border-color: #004D99;
-}
-
-.search-input:focus {
-  outline: none;
-  border: 1px solid #cccccc;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .hero {
@@ -148,12 +150,13 @@ html {
   background: white;
   color: black;
   border-radius: 5px;
+  font-size: 20px;
   font-weight: bold;
   text-decoration: none;
 }
 
 .Home_Heading {
-  font-size: 6rem !important;
+  font-size: 9rem !important;
   font-weight: bold;
   color: #aa00ff; /* or your desired color */
   text-align: center;
@@ -161,7 +164,7 @@ html {
 }
 
 .ParaClass{
-  font-size: 1.5rem;
+  font-size: 3.5rem;
 }
 
 .section {
@@ -171,7 +174,7 @@ html {
 }
 
 .Index_Heading{
-  font-size: 2rem;
+  font-size: 3.5rem;
 }
 
 /* Pograms for Individuals */
@@ -183,23 +186,22 @@ html {
   background-color: beige;
 }
 .course-list{
-  display: flex;
-  justify-content: space-around; /* Even spacing */
-  gap: 20px; /* Adds space between cards */
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 30px;
   margin-top: 30px;
+  justify-items: center;
 }
 
 .course-card{
-  flex: 1 1 30%;
-  background-color: white;
+ background-color: white;
   padding: 20px;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
+  width: 100%;
   max-width: 300px;
-  margin: 10px auto;
 }
 
 .course-card:hover {
@@ -267,8 +269,8 @@ html {
 }
 
 .index-testimonials .testimonial-card .testimonial-image img {
-  width: 80px;
-  height: 80px;
+  width: 175px;
+  height: 142px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -296,6 +298,7 @@ html {
 
 .index-testimonials .view-more .cta {
   padding: 10px 20px;
+  font-size: 15px;
   background-color: #5cb85c;
   color: white;
   text-decoration: none;
@@ -405,7 +408,7 @@ html {
 
 .contact{
   text-align: center;
-  height: 80vh;
+  height: 57vh;
   padding-top: 20px;
 }
 
