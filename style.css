@@ -452,12 +452,12 @@ textarea {
 }
 
 button.submit {
-  padding: 0.8rem 1.5rem;
+  padding: 13px 20px;
   background-color: #007BFF; /* Adjust to your preferred color */
   color: white;
   border: none;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 1.4rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -563,27 +563,27 @@ footer {
 }
 
 .creative-writing h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #333;
+  font-family: 'Georgia', serif;
 }
 
 .program-details .program-image img {
-  height: 250px;
+  height: 310px;
   width: 600px;
 }
 
 .program-description {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   color: #666;
   margin-bottom: 30px;
+  padding: 0px 77px;
 }
 
 .program-details {
-  display: flex;
-  justify-content: center;
+  display: -webkit-inline-box;
   align-items: center;
   gap: 40px;
-  flex-wrap: wrap;
   margin-top: 30px;
 }
 
@@ -600,7 +600,7 @@ footer {
 }
 
 .program-content h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-top: 20px;
   color: #333;
 }
@@ -608,12 +608,12 @@ footer {
 .program-content ul {
   list-style-type: square;
   margin-left: 20px;
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   color: #444;
 }
 
 .program-content p {
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   color: #555;
 }
 
@@ -1466,7 +1466,8 @@ header.header .navbar a:hover {
 
 /* Container for the sign-in form */
 #sign-in-page .sign-in-container {
-  width: 400px;
+  width: 450px;
+  height: 435px;
   background: #fff;
   padding: 2rem;
   border-radius: 15px;
@@ -1476,7 +1477,8 @@ header.header .navbar a:hover {
 
 /* Title */
 #sign-in-page .sign-in-container h2 {
-  font-size: 1.8rem;
+  font-size: 3.5rem;
+  font-family: 'Georgia', serif;
   margin-bottom: 1.5rem;
   color: #333333;
 }
@@ -1489,7 +1491,7 @@ header.header .navbar a:hover {
 
 #sign-in-page .sign-in-container .sign-in-field label {
   display: block;
-  font-size: 0.9rem;
+  font-size: 2rem;
   margin-bottom: 0.5rem;
   color: #555555;
 }
@@ -1497,7 +1499,7 @@ header.header .navbar a:hover {
 #sign-in-page .sign-in-container .sign-in-field input {
   width: 100%;
   padding: 0.8rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   border: 1px solid #ddd;
   border-radius: 5px;
   transition: border-color 0.3s;
@@ -1512,7 +1514,7 @@ header.header .navbar a:hover {
 #sign-in-page .sign-in-container .sign-in-btn {
   width: 100%;
   padding: 0.8rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #ffffff;
   background: #8e44ad;
   border: none;
@@ -1528,7 +1530,7 @@ header.header .navbar a:hover {
 /* Links */
 #sign-in-page .sign-in-container .sign-in-links {
   margin-top: 1rem;
-  font-size: 0.9rem;
+  font-size: 1.4rem;
 }
 
 #sign-in-page .sign-in-container .sign-in-links a {
