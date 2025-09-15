@@ -1467,7 +1467,7 @@ header.header .navbar a:hover {
 /* Container for the sign-in form */
 #sign-in-page .sign-in-container {
   width: 450px;
-  height: 435px;
+  height: 420px;
   background: #fff;
   padding: 2rem;
   border-radius: 15px;
@@ -1610,8 +1610,9 @@ header.header .navbar a:hover {
 
 /* Container Styling */
 .sign-up-container {
-  width: 400px;
-  padding: 10px 20px;
+  width: auto;
+  height: auto;
+  padding: 10px 30px;
   background: #ffffff;
   border-radius: 15px;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
@@ -1620,27 +1621,28 @@ header.header .navbar a:hover {
 
 /* Title */
 .sign-up-container h2 {
-  font-size: 2rem;
+  font-size: 3.5rem;
+  font-family: 'Georgia', serif;
   color: #2c3e50;
   margin-bottom: 2rem;
 }
 
 /* Form Fields */
 .sign-up-field {
-  margin-bottom: 1.5rem;
+  margin-bottom: 9px;
   text-align: left;
 }
 
 .sign-up-field label {
-  font-size: 1rem;
+  font-size: 1.6rem;
   color: #34495e;
   display: block;
 }
 
 .sign-up-field input {
   width: 100%;
-  padding: 0.7rem;
-  font-size: 1rem;
+  padding: 10px 128px;
+  font-size: 1.4rem;
   border: 1px solid #ddd;
   border-radius: 5px;
   transition: border-color 0.3s ease;
@@ -1655,7 +1657,7 @@ header.header .navbar a:hover {
 .sign-up-btn {
   width: 100%;
   padding: 1rem;
-  font-size: 1rem;
+  font-size: 1.6rem;
   background: #f39c12;
   color: #fff;
   border: none;
@@ -1674,7 +1676,7 @@ header.header .navbar a:hover {
 }
 
 .sign-up-links p {
-  font-size: 0.9rem;
+  font-size: 1.4rem;
   color: #7f8c8d;
 }
 
@@ -1739,8 +1741,9 @@ body, html {
 
 /* Container Styling */
 .forgot-password-container {
-  width: 400px;
-  padding: 2.5rem;
+  width: auto;
+  height: auto;
+  padding: 3.5rem;
   background: rgba(255, 255, 255, 0.9); /* Semi-transparent white box */
   border-radius: 15px;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
@@ -1750,7 +1753,8 @@ body, html {
 
 /* Title */
 .forgot-password-container h2 {
-  font-size: 2rem;
+  font-size: 3.5rem;
+  font-family: 'Georgia', serif;
   color: #2c3e50;
   margin-bottom: 1.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adds a slight shadow for depth */
@@ -1758,7 +1762,7 @@ body, html {
 
 /* Description */
 .forgot-password-container p {
-  font-size: 1rem;
+  font-size: 2rem;
   color: #7f8c8d;
   margin-bottom: 2rem;
 }
@@ -1770,7 +1774,7 @@ body, html {
 }
 
 .forgot-password-field label {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #34495e;
   display: block;
   margin-bottom: 0.5rem;
@@ -1779,7 +1783,7 @@ body, html {
 .forgot-password-field input {
   width: 100%;
   padding: 0.8rem;
-  font-size: 1rem;
+  font-size: 1.4rem;
   border: 1px solid #ddd;
   border-radius: 5px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -1795,7 +1799,7 @@ body, html {
 .forgot-password-btn {
   width: 100%;
   padding: 1rem;
-  font-size: 1rem;
+  font-size: 1.6rem;
   background: linear-gradient(45deg, #ff7e5f, #feb47b, #ff6a00);
   color: #fff;
   border: none;
@@ -1821,6 +1825,7 @@ body, html {
 }
 
 .forgot-password-links a {
+  font-size: 1.4rem;
   color: #ff7e5f;
   text-decoration: none;
   font-weight: bold;

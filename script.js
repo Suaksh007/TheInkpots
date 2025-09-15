@@ -34,16 +34,40 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       header.classList.remove('scrolled');
     }
-  }); // Closing bracket ADDED here
-  // Contact Form Alert
-  const contactForm = document.getElementById('contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Thank you for contacting InkPots!');
-      contactForm.reset();
-    });
-  }
+  }); 
+  
+  // Contact Form - Send email via backend
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    try {
+      const response = await fetch("https://theinkpots-backend.onrender.com/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      if (response.ok) {
+        alert("✅ Thank you! Your message has been sent.");
+        contactForm.reset();
+      } else {
+        alert("❌ Something went wrong. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("⚠️ Unable to connect to the server. Try again later.");
+    }
+  });
+}
+
   // Gallery Slideshow with Dots
   const slides = document.querySelectorAll('.gallery .slide');
   const dots = document.querySelectorAll('.gallery .dot');
